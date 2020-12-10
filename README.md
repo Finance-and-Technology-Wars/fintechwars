@@ -1,1 +1,1 @@
-# fintechwars
+# Finance and Technology Wars
