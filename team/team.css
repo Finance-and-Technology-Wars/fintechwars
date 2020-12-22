@@ -161,8 +161,8 @@ input
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    font-family: "Comfortaa";
     font-size: 40px;
     font-weight: 900;
     pointer-events: none;
@@ -175,6 +175,7 @@ input
     position: absolute;
     top: 500px;
     margin: 15px;
+    font-family: "Comfortaa";
     opacity: 0;
     transition: 0.5s;
     z-index: 30;
