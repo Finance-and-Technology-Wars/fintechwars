@@ -208,6 +208,7 @@ body::after
     {
         height: 50%;
         background-color: #ffffff00;
+        border: none;
         border-radius: 0px;
         box-shadow: 0 0 0 #00000000;
     }
@@ -216,6 +217,7 @@ body::after
     {
         height: 50%;
         top: 50%;
+        border: none;
         background-color: #ffffff00;
         box-shadow: 0 0 0 #00000000;
     }
