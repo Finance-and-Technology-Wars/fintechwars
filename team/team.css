@@ -1,0 +1,212 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ff0000, #ff00ff);
+    clip-path: circle(30% at left 20%);
+    z-index: -1;
+}
+
+body::after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(30% at right 70%);
+    z-index: -1;
+}
+
+.team
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+    flex-wrap: wrap;
+}
+
+.haider, .ankit
+{
+    background-color: #ffffff20;
+    width: 300px;
+    height: 300px;
+    border-top: 2px solid #ffffff3f;
+    border-left: 2px solid #ffffff3f;
+    border-right: 2px solid #ffffff00;
+    border-bottom: 2px solid #ffffff00;
+    margin: 120px 20px 20px 20px;
+    border-radius: 20px;
+    transition: 0.4s;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+    -ms-backdrop-filter: blur(5px);
+    -o-backdrop-filter: blur(5px);
+}
+
+.headshot
+{
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    align-items: center;
+}
+
+.face
+{
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    box-shadow: 0px 10px 30px #000000;
+    transition: 0.4s;
+    z-index: 30;
+}
+
+.name
+{
+    display: flex;
+    justify-content: center;
+    font-family: "Comfortaa";
+    font-size: 30px;
+    font-weight: 700;
+    color: #e1e2e1;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: 0.4s;
+    z-index: 40px;
+}
+
+.position
+{
+    display: flex;
+    justify-content: center;
+    font-family: "Comfortaa";
+    padding: 0px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #e1e2e1;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.icon
+{
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.4s;
+}
+
+.haider:hover, .ankit:hover
+{
+    margin: 20px;
+    height: 500px;
+}
+
+.haider:hover .name, .haider:hover .position, .haider:hover .icon, .ankit:hover .name, .ankit:hover .position, .ankit:hover .icon
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.icons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bio
+{
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+input, .toogle
+{
+    position: absolute;
+    z-index: 20;
+    width: 40px;
+    height: 40px;
+    outline: none;
+}
+
+input
+{
+    opacity: 0;
+}
+
+.toggle
+{
+    background-color: #1ba098;
+    color: #051622;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 900;
+    pointer-events: none;
+    box-shadow: 0 0 0 0px #051622;
+    transition: 0.4s;
+}
+
+.biodata
+{
+    position: absolute;
+    top: 260px;
+    margin: 15px;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 30;
+    color: #1ba098;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.haider:hover input:checked ~ .toggle, .ankit:hover input:checked ~ .toggle
+{
+    transform: rotate(225deg);
+    box-shadow: 0 0 0 240px #051622;
+}
+
+.haider:hover input:checked ~ .biodata, .ankit:hover input:checked ~ .biodata
+{
+    opacity: 1;
+}
+
+@media screen and (max-width: 1024px)
+{
+
+    .haider, .ankit
+    {
+        margin: 20px;
+        height: 500px;
+    }
+
+    .haider .face, .haider .name, .haider .position, .haider .icon, .ankit .face, .ankit .name, .ankit .position, .ankit .icon
+    {
+        transition: none;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
